@@ -1,0 +1,104 @@
+{{! Admin page }}
+
+<html>
+  <head>
+    <link href="/css/admin.css" rel="stylesheet" />
+    <link href="/css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <h1>Admin Page</h1>
+    </header>
+    <main>
+
+      <h1>Connected Users</h1>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Username</th>
+            <th>Duration</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each connectedUsers}}
+            <tr>
+              <td>{{this.username}}</td>
+              <td>{{this.duration}}</td>
+              <td>
+                <button
+                  class="delete-btn"
+                  data-username="{{this.username}}"
+                >Delete</button>
+              </td>
+            </tr>
+          {{/each}}
+        </tbody>
+      </table>
+
+      <h1>Add New User</h1>
+
+      <form id="add-user-form">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" /><br /><br />
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" /><br /><br />
+        <button type="submit">Add User</button>
+      </form>
+
+      <h1>Users in File</h1>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Username</th>
+            <th>Password</th>
+            <th>Duration</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each fileUsers}}
+            <tr>
+              <td><input
+                  type="text"
+                  value="{{this.username}}"
+                  data-username="{{this.username}}"
+                /></td>
+              <td><input
+                  type="password"
+                  value="{{this.password}}"
+                  data-password="{{this.password}}"
+                /></td>
+              <td><input
+                  type="number"
+                  value="{{this.duration}}"
+                  data-duration="{{this.duration}}"
+                /></td>
+              <td>
+                <button
+                  class="save-btn"
+                  data-username="{{this.username}}"
+                >Save</button>
+                <button
+                  class="delete-btn"
+                  data-username="{{this.username}}"
+                >Delete</button>
+              </td>
+            </tr>
+          {{/each}}
+        </tbody>
+      </table>
+
+      <button id="add-users-to-db-btn">Add Users to Database</button>
+      <button id="clear-file-btn">Clear File</button>
+
+    </main>
+    <footer>
+      {{date}}
+    </footer>
+    <script src="/js/admin.js"></script>
+  </body>
+
+</html>

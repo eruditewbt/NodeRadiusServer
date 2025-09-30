@@ -1,0 +1,49 @@
+{{!-- ## Updated HTML Template for info.hbs  --}}
+
+<html>
+  <head>
+    <link href="/css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <h1>User Status</h1>
+    </header>
+    <main>
+      
+      <div class="container">
+        <h1>{{info.title}}</h1>
+
+        <h2>Images</h2>
+        <div class="images">
+          {{#each info.images}}
+            <img src="{{this.src}}" alt="{{this.alt}}" />
+          {{/each}}
+        </div>
+
+        <h2>Posts</h2>
+        <div class="posts">
+          {{#each info.posts}}
+            <div class="post">
+              <h3>{{this.title}}</h3>
+              <p>{{this.content}}</p>
+            </div>
+          {{/each}}
+        </div>
+
+        <h2>Headlines</h2>
+        <div class="headlines">
+          {{#each info.headlines}}
+            <div class="headline">
+              <h3>{{this.title}}</h3>
+              <p>{{this.content}}</p>
+            </div>
+          {{/each}}
+        </div>
+      </div>
+    </main>
+    <footer>
+      {{date}}
+    </footer>
+  </body>
+
+</html>

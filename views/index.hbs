@@ -1,0 +1,28 @@
+{{! Handlebars template (index.hbs) }}
+
+<html>
+  <head>
+    <title>File Uploader</title>
+    <link href="/css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <h1>Hotspot Login</h1>
+    </header>
+    <section class="forms-section">
+      <form id="login-form">
+        <label>Username:</label>
+        <input type="text" id="username" />
+        <br />
+        <label>Password:</label>
+        <input type="password" id="password" />
+        <br />
+        <button id="login-btn">Login</button>
+      </form>
+    </section>
+    <footer>
+      {{date}}
+    </footer>
+    <script src="/js/script.js"></script>
+  </body>
+</html>

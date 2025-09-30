@@ -1,0 +1,459 @@
+/* Run Code Button and Output Styles */
+.run-code-form {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.run-btn {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5em 1em;
+  font-size: 1em;
+  cursor: pointer;
+  margin-right: 0.5em;
+  transition: background 0.2s;
+}
+.run-btn:hover {
+  background-color: #218838;
+}
+.run-output-section {
+  margin-top: 1em;
+  background: #222;
+  color: #e0e0e0;
+  border-radius: 8px;
+  padding: 1em;
+}
+.run-output {
+  font-family: 'Fira Mono', 'Consolas', 'Menlo', 'Monaco', monospace;
+  font-size: 1em;
+  white-space: pre-wrap;
+  word-break: break-all;
+  background: none;
+  border: none;
+  color: inherit;
+}
+/* Code Editor Styles */
+.code-editor {
+  width: 100%;
+  min-height: 350px;
+  max-height: 350px;
+  font-family: "Fira Mono", "Consolas", "Menlo", "Monaco", monospace;
+  font-size: 1em;
+  background: #181818;
+  color: #e0e0e0;
+  border: 1px solid #444;
+  border-radius: 8px;
+  padding: 1em;
+  resize: vertical;
+  overflow: auto;
+  margin-bottom: 1em;
+  box-sizing: border-box;
+}
+
+.file-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  margin-bottom: 1em;
+}
+
+.rename-input {
+  font-size: 1em;
+  padding: 0.5em;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 250px;
+  margin-right: 0.5em;
+}
+
+.rename-btn,
+.save-btn {
+  background-color: #337ab7;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5em 1em;
+  font-size: 1em;
+  cursor: pointer;
+  margin-right: 0.5em;
+  transition: background 0.2s;
+}
+.rename-btn:hover,
+.save-btn:hover {
+  background-color: #23527c;
+}
+/* Form Section Styles */
+.forms-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  margin: 1em 0;
+}
+
+.forms-section form {
+  flex: 1 1 300px;
+  min-width: 250px;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5em;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="file"],
+select,
+textarea {
+  margin-bottom: 1em;
+  width: 100%;
+  padding: 0.75em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+button[type="submit"] {
+  background-color: #337ab7;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 0.75em 1.5em;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button[type="submit"]:hover {
+  background-color: #23527c;
+}
+
+/* List Section Styles */
+.lists-section {
+  margin: 2em 0;
+}
+
+.file-actions {
+  font-size: 0.95em;
+  color: #888;
+}
+
+.download-link {
+  color: #337ab7;
+  text-decoration: underline;
+}
+
+.download-link:hover {
+  color: #23527c;
+}
+
+.back-link {
+  color: #337ab7;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+  color: #23527c;
+}
+/* 
+style.css */
+/* Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+/* Header Styles */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 1em;
+  text-align: center;
+}
+
+/* Upload Form Styles */
+.create-dir-form,
+.upload-form {
+  padding: 1em;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 1em;
+}
+
+.upload-form input[type="file"] {
+  width: 100%;
+  padding: 1em;
+  border: none;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+}
+
+.upload-form button[type="submit"] {
+  width: 100%;
+  padding: 1em;
+  border: none;
+  border-radius: 10px;
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* File List Styles */
+.file-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.file-list li {
+  padding: 1em;
+  border-bottom: 1px solid #ddd;
+}
+
+.file-list li a {
+  text-decoration: none;
+  color: #333;
+}
+
+.file-list li a:hover {
+  color: #666;
+}
+
+/* File Page Styles */
+.file-page {
+  padding: 1em;
+}
+
+.file-page pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  padding: 1em;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+.write-form {
+  padding: 1em;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 1em;
+}
+
+.write-form select,
+.write-form input[type="text"] {
+  width: 100%;
+  padding: 1em;
+  border: none;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  margin-bottom: 1em;
+}
+
+.write-form textarea {
+  width: 100%;
+  height: 10em;
+  padding: 1em;
+  border: none;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  margin-bottom: 1em;
+}
+
+.write-form button[type="submit"] {
+  width: 100%;
+  padding: 1em;
+  border: none;
+  border-radius: 10px;
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* dir list */
+.dir-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dir-list li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.dir-list li a {
+  text-decoration: none;
+  color: #337ab7;
+}
+
+.dir-list li a:hover {
+  color: #23527c;
+}
+
+.file-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.file-list li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.file-list li a {
+  text-decoration: none;
+  color: #337ab7;
+}
+
+.file-list li a:hover {
+  color: #23527c;
+}
+
+.create-dir-form {
+  margin-bottom: 20px;
+}
+
+.upload-form {
+  margin-bottom: 20px;
+}
+
+.write-form {
+  margin-bottom: 20px;
+}
+
+.write-form textarea {
+  width: 100%;
+  height: 150px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.write-form select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.write-form input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+/* some responsive design elements  */
+@media only screen and (max-width: 768px) {
+  .create-dir-form,
+  .upload-form,
+  .write-form {
+    margin-bottom: 10px;
+  }
+  .dir-list li,
+  .file-list li {
+    padding: 5px;
+  }
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 768px) {
+  .upload-form {
+    margin: 0.5em;
+  }
+  .file-list li {
+    padding: 0.5em;
+  }
+}
+
+/* ## CSS Styles specifically for info*/
+body {  
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h2 {
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.images img {
+  width: 150px;
+  height: 150px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.posts {
+  margin-top: 20px;
+}
+
+.post {
+  margin-bottom: 20px;
+  padding: 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+.post h3 {
+  margin-top: 0;
+}
+
+.headlines {
+  margin-top: 20px;
+}
+
+.headline {
+  margin-bottom: 20px;
+  padding: 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+.headline h3 {
+  margin-top: 0;
+}
+
+
+
+/* End of style.css */

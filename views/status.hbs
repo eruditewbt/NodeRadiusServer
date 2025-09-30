@@ -1,0 +1,24 @@
+{{! ## Status Page (status.hbs) }}
+
+<html>
+  <head>
+    <link href="/css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <h1>User Status</h1>
+    </header>
+    <main>
+      <p>Username: {{statusData.username}}</p>
+      <p>Email: {{statusData.email}}</p>
+      <p>IP Address: {{statusData.ipAddress}}</p>
+      <p>Login Time: {{statusData.loginTime}}</p>
+      <p>Login Time: {{statusData.duration}}</p>
+      <p>Login Time: {{statusData.status}}</p>
+    </main>
+    <footer>
+      {{date}}
+    </footer>
+  </body>
+
+</html>
